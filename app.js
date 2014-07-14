@@ -1,5 +1,6 @@
 var express = require('express');
 var path = require('path');
+var fs = require('fs');
 //var favicon = require('static-favicon');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
@@ -9,7 +10,6 @@ var users = require('./routes/users');
 var port = process.argv[2] || 8181;
 
 var app = express();
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
