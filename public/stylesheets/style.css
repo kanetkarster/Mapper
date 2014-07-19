@@ -6,3 +6,50 @@ body {
 a {
   color: #00B7FF;
 }
+
+/*
+  The List CSS is HelvetiList
+  No copyright notice was posted, but the article implied it was ok to use
+  (c) Joshua Johnson
+  http://designshack.net/articles/css/5-simple-and-practical-css-list-styles-you-can-copy-and-paste/
+*/
+#parent {
+  float: center;
+}
+#gpxlist {
+  float: left;
+  width: 150;
+  margin: 30px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#gpxelm {
+  font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+  border-bottom: 1px solid #ccc;
+}
+
+#gpxelm:last-child {
+  border: none;
+}
+
+#gpxelm a {
+  text-decoration: none;
+  color: #000;
+
+  -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+  transition: font-size 0.3s ease, background-color 0.3s ease;
+  display: block;
+  width: 200px;
+}
+
+#gpxelm a:hover {
+  font-size: 30px;
+  background: #f6f6f6;
+}

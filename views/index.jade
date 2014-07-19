@@ -7,11 +7,11 @@ block content
   script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
   script(src='/javascripts/gpx.js')
   script(src='/javascripts/leaflet-embed.js')
-  h1= title
-  p Welcome to #{title}
-  p These are the contents #{files}
+  div(id='parent')
+    div(id='gpxlist')
+      ul
+        each FILE in files
+          li#gpxelm
+            a= FILE
 
-  ul
-    each FILE in files
-      li= FILE
-  #map(style='height: 800px; width: 1000px')
+    #map(style='height: 800px; width: 1200px; float: center;')
