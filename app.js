@@ -5,7 +5,6 @@ var fs = require('fs');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
 var routes = require('./routes/index');
-var users = require('./routes/users');
 
 var port = process.argv[2] || 8181;
 
@@ -22,7 +21,6 @@ app.use(bodyParser.urlencoded());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-app.use('/users', users);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {

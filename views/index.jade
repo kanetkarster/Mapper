@@ -9,5 +9,9 @@ block content
   script(src='/javascripts/leaflet-embed.js')
   h1= title
   p Welcome to #{title}
+  p These are the contents #{files}
 
+  ul
+    each FILE in files
+      li= FILE
   #map(style='height: 800px; width: 1000px')
