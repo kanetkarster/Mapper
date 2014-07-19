@@ -8,10 +8,8 @@ block content
   script(src='/javascripts/gpx.js')
   script(src='/javascripts/leaflet-embed.js')
   div(id='parent')
-    div(id='gpxlist')
-      ul
-        each FILE in files
-          li#gpxelm
-            a= FILE
+    ul(id='gpxlist')
+      each FILE in files
+        li#gpxelm= FILE
 
     #map(style='height: 800px; width: 1200px; float: center;')
