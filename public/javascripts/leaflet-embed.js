@@ -10,8 +10,11 @@ function loadGPX(fn) {
 
 //Creates the Leaflet Map
 $(document).ready(function(){
-  var url = 'http://{s}.tile.osm.org/{z}/{x}/{y}.png';
-  var copyright = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>';
+  var url = 'http://{s}.tile.thunderforest.com/cycle/{z}/{x}/{y}.png'
+  //'http://{s}.tile.osm.org/{z}/{x}/{y}.png';
+  var copyright = 'Map &copy <a href="http://www.thunderforest.com">Thunderforest</a>, \
+                   Data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, \
+                   <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>';
 
   map = new L.Map('map');
   L.tileLayer(url, {
