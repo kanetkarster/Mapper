@@ -8,8 +8,8 @@ function loadGPX(fn) {
   }).addTo(map);
 }
 
-//Creates the Leaflet Map
-$(document).ready(function(){
+$(function(){
+  //Creates the Leaflet Map
   var url = 'http://{s}.tile.thunderforest.com/cycle/{z}/{x}/{y}.png'
   //'http://{s}.tile.osm.org/{z}/{x}/{y}.png';
   var copyright = 'Map &copy <a href="http://www.thunderforest.com">Thunderforest</a>, \
@@ -23,10 +23,8 @@ $(document).ready(function(){
   }).addTo(map);
   //Loads the first GPX file onto the Leaflet Map
   loadGPX($('#gpxelm').first().html());
-});
 
 //Click Handling on the List
-$(function(){
   $('#gpxlist').on('click', 'li', function(){
     loadGPX($(this).html());
   });
